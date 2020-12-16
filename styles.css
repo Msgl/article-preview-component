@@ -1,0 +1,120 @@
+:root {
+    --very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --desaturated-dark-blue: hsl(214, 17%, 51%);
+    --grayish-blue: hsl(212, 23%, 69%);
+    --light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    font-size: 13px;
+    background-color: var(--light-grayish-blue);
+    color: var(--very-dark-grayish-blue);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 10px;
+    width: 320px;
+    margin: 150px auto;
+}
+
+.top-image {
+    border-radius: 10px 10px 0 0;
+    width: auto;
+    height: 220px;
+    object-fit: cover;
+}
+
+.info, .profile {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 35px;
+}
+
+.info {
+    /* margin: 25px; */
+}
+
+.info h2 {
+    font-size: 1.2em;
+}
+
+.info p {
+    padding-top: 15px;
+    line-height: 1.7em;
+    color: hsl(214, 17%, 51%);
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+}
+
+.profile-image {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.profile-info {
+    flex: 60%;
+    font-size: 0.8em;
+    padding-left: 15px;
+    line-height: 2em;
+}
+
+.profile-info h2, .profile-info p {
+    font-size: 1.2em;
+}
+
+.profile-info p {
+    color: hsl(212, 23%, 69%);
+}
+
+.profile-btn {
+    background-image: url(/images/icon-share.svg);
+    background-repeat: no-repeat;
+    background-color: hsl(210, 46%, 95%);
+    background-position: center;
+    border-radius: 50%;
+    height: 32px;
+    width: 32px;
+    cursor: pointer;
+}
+
+.share {
+    visibility: hidden;
+}
+
+@media only screen and (min-width: 800px) {
+    .container {
+        flex-direction: row;
+        height: 300px;
+        width: 700px;
+        margin: 300px auto;
+    }
+
+    .top-image {
+        width: 300px;
+        border-radius: 10px 0 0 10px;
+        height: auto;
+        object-fit: cover;
+        background-color: rosybrown;
+        
+    }
+
+    .container-info {
+        width: 400px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
