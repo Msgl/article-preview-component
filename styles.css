@@ -18,7 +18,7 @@ body {
     color: var(--very-dark-grayish-blue);
 }
 
-.container {
+.card {
     display: flex;
     flex-direction: column;
     background-color: white;
@@ -27,36 +27,33 @@ body {
     margin: 150px auto;
 }
 
-.top-image {
+.card-image {
     border-radius: 10px 10px 0 0;
     width: auto;
     height: 220px;
     object-fit: cover;
 }
 
-.info, .profile {
+.image-info, .profile-container {
     padding-left: 30px;
     padding-right: 30px;
     padding-top: 35px;
 }
 
-.info {
-    /* margin: 25px; */
-}
-
-.info h2 {
+.image-info h2 {
     font-size: 1.2em;
 }
 
-.info p {
+.image-info p {
     padding-top: 15px;
     line-height: 1.7em;
     color: hsl(214, 17%, 51%);
 }
 
-.profile {
+.profile-container {
     display: flex;
     align-items: center;
+    margin-bottom: 15px;
 }
 
 .profile-image {
@@ -65,56 +62,90 @@ body {
     border-radius: 50%;
 }
 
-.profile-info {
+.profile-text {
     flex: 60%;
     font-size: 0.8em;
     padding-left: 15px;
     line-height: 2em;
 }
 
-.profile-info h2, .profile-info p {
+.profile-text h2, .profile-text p {
     font-size: 1.2em;
 }
 
-.profile-info p {
+.profile-text p {
     color: hsl(212, 23%, 69%);
 }
 
-.profile-btn {
-    background-image: url(/images/icon-share.svg);
-    background-repeat: no-repeat;
+.share-btn{
     background-color: hsl(210, 46%, 95%);
-    background-position: center;
     border-radius: 50%;
+    height: 32px;
+    width: 32px;
+    cursor: pointer;
+
+}
+
+.share-btn> svg {
+    position: relative;
+    left: 32%;
+    top: 22%;
+}
+
+.share-tooltip {
+    display: flex;
+    display: none;
+    background-color: hsl(217, 19%, 35%);
+    border-radius: 0 0 10px 10px;
+    height: 70px;
+    color: white;
+}
+
+.facebook-btn {
+    background-image: url(/images/icon-facebook.svg);
+    background-repeat: no-repeat;
+    background-position: center;
     height: 32px;
     width: 32px;
     cursor: pointer;
 }
 
-.share {
-    visibility: hidden;
+.twitter-btn {
+    background-image: url(/images/icon-twitter.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 32px;
+    width: 32px;
+    cursor: pointer;
 }
 
+.pinterest-btn {
+    background-image: url(/images/icon-pinterest.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 32px;
+    width: 32px;
+    cursor: pointer;
+}
+
+
 @media only screen and (min-width: 800px) {
-    .container {
+    .card {
         flex-direction: row;
         height: 300px;
         width: 700px;
         margin: 300px auto;
     }
 
-    .top-image {
+    .card-image {
         width: 300px;
         border-radius: 10px 0 0 10px;
         height: auto;
         object-fit: cover;
         background-color: rosybrown;
-        
     }
 
-    .container-info {
-        width: 400px;
-        padding-left: 10px;
-        padding-right: 10px;
+    .share-btn svg path{
+        fill: white;
     }
 }
