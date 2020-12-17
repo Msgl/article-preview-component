@@ -78,6 +78,10 @@ body {
     color: hsl(212, 23%, 69%);
 }
 
+svg {
+    width: fit-content;
+}
+
 .share-btn{
     background-color: hsl(210, 46%, 95%);
     border-radius: 50%;
@@ -89,58 +93,43 @@ body {
 
 .share-btn> svg {
     position: relative;
-    left: 32%;
-    top: 22%;
+    left: 10px;
+    top: 7px;
 }
-
-/* .share-container {
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    bottom: 0;
-    display: none;
-    background-color: hsl(217, 19%, 35%);
-    border-radius: 0 0 10px 10px;
-    height: 70px;
-    width:100%;
-} */
 
 .share-container {
     display: none;
     justify-content: center;
+    align-content: center;
     position: absolute;
     bottom: 0;
     background-color: hsl(217, 19%, 35%);
     border-radius: 0 0 10px 10px;
     height: 70px;
     width:100%;
+    padding-left: 10%;
 }
 
 .share-text {
     align-self: center;
+    padding-right: 15px;
+    padding-left: 5px;
+    color: hsl(212, 23%, 69%);
 }
 
 .share-container h3 {
     color: white;
     letter-spacing: 0.5em;
     text-transform: uppercase;
-    font-weight: 1;
+    font-weight: lighter;
 }
 
 .share-icons {
     display:flex;
     align-self: center;
+    padding-right: 100px;
 }
 
-.share-btn-active {
-    align-self: center;
-    padding-left: 20px;
-    background-color: hsl(217, 19%, 35%);;
-}
-
-.share-btn-active svg path{
-    fill: white;
-}
 
 .facebook-btn {
     background-image: url(/images/icon-facebook.svg);
@@ -169,9 +158,6 @@ body {
     cursor: pointer;
 }
 
-.share-container .share-btn {
-    
-}
 
 @media only screen and (min-width: 800px) {
     .card {
@@ -188,4 +174,34 @@ body {
         object-fit: cover;
         background-color: rosybrown;
     }
+
+    .share-container {
+        display:none;
+        justify-content: center;
+        position: absolute;
+        bottom: 85px;
+        right: -80px;
+        background-color: hsl(217, 19%, 35%);
+        border-radius: 0 0 10px 10px;
+        height: 60px;
+        width: 250px;
+        border-radius: 10px;
+        padding-left: 0;
+    }
+    
+    .share-container::after {
+        content:'';
+        position: absolute;
+        bottom: -10px;
+        margin: auto;
+        border-top: 15px solid hsl(217, 19%, 35%);
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+    }
+
+    .share-icons {
+        padding-right: 0;
+    }
+    
+
 }
