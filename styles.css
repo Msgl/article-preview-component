@@ -3,36 +3,37 @@
     --desaturated-dark-blue: hsl(214, 17%, 51%);
     --grayish-blue: hsl(212, 23%, 69%);
     --light-grayish-blue: hsl(210, 46%, 95%);
+    --white: hsl(0, 0%, 100%);
 }
 
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 body {
-    font-family: 'Manrope', sans-serif;
-    font-size: 13px;
     background-color: var(--light-grayish-blue);
     color: var(--very-dark-grayish-blue);
+    font-family: 'Manrope', sans-serif;
+    font-size: 13px;
 }
 
 .card {
+    background-color: var(--white);
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
-    background-color: white;
-    border-radius: 10px;
-    width: 320px;
     margin: 150px auto;
     position: relative;
+    width: 320px;
 }
 
 .card-image {
     border-radius: 10px 10px 0 0;
-    width: auto;
     height: 220px;
     object-fit: cover;
+    width: auto;
 }
 
 .image-info, .profile-container {
@@ -46,28 +47,28 @@ body {
 }
 
 .image-info p {
-    padding-top: 15px;
+    color: var(--desaturated-dark-blue);
     line-height: 1.7em;
-    color: hsl(214, 17%, 51%);
+    padding-top: 15px;
 }
 
 .profile-container {
-    display: flex;
     align-items: center;
+    display: flex;
     margin-bottom: 15px;
 }
 
 .profile-image {
+    border-radius: 50%;
     height: 40px;
     width: 40px;
-    border-radius: 50%;
 }
 
 .profile-text {
     flex: 60%;
     font-size: 0.8em;
-    padding-left: 15px;
     line-height: 2em;
+    padding-left: 15px;
 }
 
 .profile-text h2, .profile-text p {
@@ -75,87 +76,83 @@ body {
 }
 
 .profile-text p {
-    color: hsl(212, 23%, 69%);
-}
-
-svg {
-    width: fit-content;
+    color: var(--grayish-blue);
 }
 
 .share-btn{
-    background-color: hsl(210, 46%, 95%);
+    background-color: var(--light-grayish-blue);
     border-radius: 50%;
+    cursor: pointer;
     height: 32px;
     width: 32px;
-    cursor: pointer;
     z-index: 1;
 }
 
 .share-btn> svg {
-    position: relative;
     left: 10px;
+    position: relative;
     top: 7px;
 }
 
 .share-container {
-    display: none;
-    justify-content: center;
     align-content: center;
-    position: absolute;
-    bottom: 0;
-    background-color: hsl(217, 19%, 35%);
+    background-color: var(--very-dark-grayish-blue);
     border-radius: 0 0 10px 10px;
+    bottom: 0;
+    display: none;
     height: 70px;
-    width:100%;
+    justify-content: center;
     padding-left: 10%;
+    position: absolute;
+    width:100%;
 }
 
 .share-text {
     align-self: center;
-    padding-right: 15px;
+    color: var(--grayish-blue);
     padding-left: 5px;
-    color: hsl(212, 23%, 69%);
+    padding-right: 15px;
 }
 
 .share-container h3 {
-    color: white;
+    color: var(--white);
+    font-weight: lighter;
     letter-spacing: 0.5em;
     text-transform: uppercase;
-    font-weight: lighter;
 }
 
 .share-icons {
-    display:flex;
     align-self: center;
+    display:flex;
     padding-right: 100px;
 }
 
 
 .facebook-btn {
     background-image: url(/images/icon-facebook.svg);
-    background-repeat: no-repeat;
     background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
     height: 32px;
     width: 32px;
-    cursor: pointer;
 }
 
 .twitter-btn {
     background-image: url(/images/icon-twitter.svg);
-    background-repeat: no-repeat;
     background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
     height: 32px;
     width: 32px;
-    cursor: pointer;
 }
 
 .pinterest-btn {
     background-image: url(/images/icon-pinterest.svg);
-    background-repeat: no-repeat;
     background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
     height: 32px;
     width: 32px;
-    cursor: pointer;
 }
 
 
@@ -163,45 +160,42 @@ svg {
     .card {
         flex-direction: row;
         height: 300px;
-        width: 700px;
         margin: 300px auto;
+        width: 700px;
     }
 
     .card-image {
-        width: 300px;
         border-radius: 10px 0 0 10px;
         height: auto;
         object-fit: cover;
-        background-color: rosybrown;
+        width: 300px;
     }
 
     .share-container {
-        display:none;
-        justify-content: center;
-        position: absolute;
-        bottom: 85px;
-        right: -80px;
-        background-color: hsl(217, 19%, 35%);
+        background-color: var(--very-dark-grayish-blue);
         border-radius: 0 0 10px 10px;
-        height: 60px;
-        width: 250px;
         border-radius: 10px;
+        bottom: 85px;
+        display:none;
+        height: 60px;
+        justify-content: center;
         padding-left: 0;
-    }
-    
-    .share-container::after {
-        content:'';
         position: absolute;
-        bottom: -10px;
-        margin: auto;
-        border-top: 15px solid hsl(217, 19%, 35%);
+        right: -80px;
+        width: 250px;
+    }
+
+    .share-container::after {
         border-left: 15px solid transparent;
         border-right: 15px solid transparent;
+        border-top: 15px solid var(--very-dark-grayish-blue);
+        bottom: -10px;
+        content:'';
+        margin: auto;
+        position: absolute;
     }
 
     .share-icons {
         padding-right: 0;
     }
-    
-
 }
